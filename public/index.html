@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>情緒寫作小幫手｜AI歌詞生成</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1 class="h1">情緒寫作小幫手</h1>
+      <div class="h2">AI歌詞生成</div>
+
+      <label class="label" for="theme">主題：</label>
+      <input id="theme" class="input" placeholder="例如：初開的雨夜" />
+
+      <label class="label" for="mood">情緒：</label>
+      <select id="mood" class="input">
+        <option>暗戀</option>
+        <option>熱戀</option>
+        <option>平淡</option>
+        <option>分手</option>
+        <option>重啟</option>
+      </select>
+
+      <label class="label" for="mode">模式：</label>
+      <select id="mode" class="input">
+       <option value="template">模板模式（免費、穩定）</option>
+       <option value="ai">AI 模式（需要 API Key）</option>
+      </select>
+
+      <label class="label" for="style">風格：</label>
+      <select id="style" class="input">
+        <option>抒情</option>
+        <option>嘻哈</option>
+        <option>搖滾</option>
+      </select>
+
+      <label class="label" for="length">長度：</label>
+      <select id="length" class="input">
+        <option value="標準">標準（Verse+Chorus）</option>
+        <option value="加長">加長（含 Bridge）</option>
+      </select>
+
+      <div class="hint">
+        AI 模式需要在電腦環境變數設定 <b>OPENAI_API_KEY</b>
+      </div>
+
+      <button id="gen" class="btn primary">生成歌詞</button>
+
+      <div class="box">
+        <div class="box-title">歌詞生成區：</div>
+        <textarea id="out" class="textarea" placeholder="生成的歌詞會出現在這裡…" readonly></textarea>
+      </div>
+
+      <button id="copy" class="btn">複製歌詞</button>
+      <button id="clearAll" class="btn danger">清空全部紀錄</button>
+      <div id="toast" class="toast" aria-live="polite"></div>
+
+      <div class="history-wrap">
+        <div class="history-title">使用者紀錄</div>
+        <div id="history" class="history"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "emotion-lyric-helper",
+  "version": "1.0.0",
+  "description": "情緒寫作小幫手：輸入主題與情緒，生成歌詞（含使用者紀錄）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
